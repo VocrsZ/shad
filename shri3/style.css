@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;s
+}
+body {
+  font-family: sans-serif;
+  text-align: center;
+}
+#dropArea {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+#dropArea.drop {
+  background: rgba(200,200,200,0.5);
+  border: 5px dashed #000;
+}
+#dropArea:before {
+  content: "Drag here";
+  color: #ccc;
+  text-align: left;
+  font-size: 50px;
+  display: block;
+  bottom: 40px;
+  left: 0;
+  padding: 40px;
+  position: absolute;
+}
+#waveform {
+  width: 100%;
+  height: 100px;
+  margin: 0 auto;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  z-index: -2;
+}
+h1 {
+  display: inline-block;  
+}
+#player {
+  display: block;
+  width: 300px;
+  padding: 20px 40px;
+  margin: 10px auto;
+  background: rgba(0,0,0,0.2);
+  box-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+input[type=file] {
+  display: none;
+}
+#play, #stop {
+  position: relative;
+  display: inline-block;
+  margin: 0 10px 0 0;
+}
+#stop:after {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: #000;
+  cursor: pointer;
+}
+#stop:hover:after {
+  background: #555;
+}
+#play:after {
+  content: "";
+  display: block;
+  border-left: 20px solid #000;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  cursor: pointer;
+}
+#play:hover:after {
+  border-left-color: #555;
+}
